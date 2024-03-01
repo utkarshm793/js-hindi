@@ -28,7 +28,7 @@ let valueInNumber = Number(score)
 // "33sf"= NaN
 
 let loggedIn = 1
-let checkBool = Boolean(loggedIn) // "" = FALSE, "DSD" = TRUE
+let checkBool = Boolean(loggedIn) // it gives true // "" = FALSE, "DSD" = TRUE
 
 
 // console.log(checkBool);
@@ -123,7 +123,7 @@ const balance = 234;
 
 const number3 = 100000000;
 
-// console.log(number3.toLocaleString());
+// console.log(number3.toLocaleString()); // 1,00,00,000
 
 // ******** MATH LIBRARY *********
 
@@ -151,10 +151,87 @@ let myDate = new Date()
 // console.log(myDate.toLocaleTimeString());
 
 let createADate = new Date(2024, 8, 7)
-console.log(createADate.toDateString())
+// console.log(createADate.toDateString())
 
 let myTimeStamp = Date.now();
 
-console.log(createADate.getTime());
+// console.log(createADate.getTime());
 
-console.log("Todays final")
+let myDate1 = createADate.toLocaleString('default', {
+
+weekday: "long",
+
+})
+
+// ********** ARRAYS **********
+
+const myArr = [1,2,3,true,null,"hello"]
+
+ const myArr2 = new Array(1,4,3,5) // another way to create an array 
+
+ //     ARRAY METHODS
+
+//  myArr.push(6)
+// myArr.pop()
+
+// console.log(myArr.includes(9)); // it gives false
+
+const newArr = myArr.join() // it gives same as an array but the data type of this is a string
+
+// slice and splice
+
+const myn1 = myArr.slice(1,4)
+const myn2 = myArr.splice(1,4)
+
+// console.log(myn1) // it will give [2,3,true]
+// console.log("a", myArr)
+// console.log(myn2) // it will give [2,3,true,null]
+
+const marvel_heros = ["IronMan","Cap", "Thor" ]
+const dc_heros = ["superman", "batman","wonderwomen"]
+
+// console.log(marvel_heros.push(dc_heros))
+
+const allHeros = marvel_heros.concat(dc_heros)
+
+// console.log(allHeros).  it will merge both arrays
+ 
+const all_new_heros = [...marvel_heros , ...dc_heros]
+// console.log(all_new_heros)
+
+const checkArr = [1,2,[3,4,5,[6,7,8]],[9,10],]
+
+// console.log(checkArr.flat(1)) //it removes the first bracket which inside the array
+
+// console,log(Array.from("Utkarsh")) // it will make it array by taking its letters as an element
+
+// console,log(Array.from({name: "Utkarsh"})) // it is a different case
+
+// ********* OBJECTS - IMPORTANT TOPIC ************
+
+// Singelton, object literals
+// Object.creae  // this is a constructor method
+
+const mySym = Symbol("key1")
+
+const userA = {
+
+name: "Utkarsh",
+"full name": "Utkarsh Mishra",
+[mySym]: "mykey1",
+age: 19,
+ location: "gorakhpur"
+}
+
+// console.log(userA.age) == console.log(userA.["age"])
+
+// console.log(userA.["full name"]) // only can be access by this method
+
+// console.log(userA.[mySym]) // the way to access the symbol data type in object
+
+// Object.freeze(userA) // it will freeze all the upcoming changes in the object
+
+
+
+
+
