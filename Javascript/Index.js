@@ -231,6 +231,118 @@ age: 19,
 
 // Object.freeze(userA) // it will freeze all the upcoming changes in the object
 
+userA.greeting = function(){
+    // console.log("Hello everyone")
+}
+
+
+userA.greeting2 = function(){
+    // console.log(`Hello everyone, ${this.name}`)
+}
+
+
+// console.log(userA.greeting())
+// console.log(userA.greeting2())
+
+// const tinderUser = new Object() // one way to create an object, it is a singelton object
+
+const tinderUser ={} //  this is a non singelton object 
+ 
+tinderUser.id = "2345rfgh"
+tinderUser.name = "ukarsh mishra"
+tinderUser.isLoggesIn = false
+
+const regularUser = {
+    email: "utkarshm793",
+    fullname: {
+        userFullName: {
+            firstName: "utkarsh",
+            lastName: "mishra"
+        }
+
+    }
+}
+
+// console.log(regularUser.fullname)  // to access things in the obect
+
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "a", 4: "b"}
+
+const obj3 = {...obj1,...obj2} // this is the another way to add an object
+const obj4 = Object.assign({},obj1, obj2) // it is the main way to add an object 
+// console.log(obj3)
+
+const userArr = [
+    {
+        name: "utk",
+        email: "utkm793@gmail"
+    },
+    {
+        name: "utk1",
+        email: "1utkm793@gmail"
+    },
+    {
+        name: "utk2",
+        email: "2utkm793@gmail"
+    }
+]
+
+// console.log(userArr[1].name)gcfgtfcg
+
+console.log(Object.keys(tinderUser))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
