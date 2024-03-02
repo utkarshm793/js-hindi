@@ -288,20 +288,52 @@ const userArr = [
 ]
 
 // console.log(userArr[1].name)gcfgtfcg
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
 
-console.log(Object.keys(tinderUser))
+// console.log(tinderUser.hasOwnProprty('isLoggedIn'));
 
+//.  ******* DE-STRUCTURING *********
 
+const couse = {
 
+    coursename: "javascript",
+    price: 999
+}
+// course.coursename to call
+const {coursename: name3} = couse
 
+// console.log(name3)
 
+//  ***** FUNCTIONS *******
 
+function printName(){
+    console.log("utkarsh mishra")
+}
 
+// printName() this is the way to call te funcyion 
 
+// function addnum(num1,num2){
+//    console.log(num1 + num2)
+// }
+// addnum(7,9)
 
+function addnum(num1,num2){
+    return  num1 + num2
+ }
+ const result1 = addnum(7,8)
+//  console.log(`result is ${result1}`)
+ 
+function logginUsermsg(username){
+if(!username){ // !username => (username === undefined)
+console.log("Please Enter a username")
+return
+}
+ return `${username} just logged in`
+}
 
-
-
+// console.log(logginUsermsg("utkarsh mishra"))
+//  console.log(logginUsermsg()) it will print the statement given in the if condition
 
 
 
