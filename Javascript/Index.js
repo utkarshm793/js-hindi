@@ -76,8 +76,8 @@ let myName = "Utkarsh Mishra";
 let myNewName = myName;
 myNewName = "Utkarsh Pandit";
 
-// console.log(myName);
-// console.log(myNewName);
+// console.log(myName); // this will print utkarsh mishra
+// console.log(myNewName); // this will print utkarsh pandit
 
 let user1 = {
     name: "Utk",
@@ -88,7 +88,7 @@ let user2 = user1;
 
 user2.name = "mis";
 // console.log(user1.name);
-// console.log(user2.name);
+// console.log(user2.name); // both will print the same thing
 
 // ******* STRINGS ********
 
@@ -210,7 +210,7 @@ const checkArr = [1,2,[3,4,5,[6,7,8]],[9,10],]
 // ********* OBJECTS - IMPORTANT TOPIC ************
 
 // Singelton, object literals
-// Object.creae  // this is a constructor method
+// Object.create  // this is a constructor method
 
 const mySym = Symbol("key1")
 
@@ -225,7 +225,7 @@ age: 19,
 
 // console.log(userA.age) == console.log(userA.["age"])
 
-// console.log(userA.["full name"]) // only can be access by this method
+// console.log(userA.["full name"]) // full name only can be access by this method
 
 // console.log(userA.[mySym]) // the way to access the symbol data type in object
 
@@ -295,13 +295,13 @@ const userArr = [
 
 //.  ******* DE-STRUCTURING *********
 
-const couse = {
+const course = {
 
     coursename: "javascript",
     price: 999
 }
-// course.coursename to call
-const {coursename: name3} = couse
+// course.coursename // to call
+const {coursename: name3} = course
 
 // console.log(name3)
 
@@ -336,22 +336,57 @@ return
 //  console.log(logginUsermsg()) it will print the statement given in the if condition
 
 
+function calculateCart(...num){
+    return num
+}
+
+// console.log(calculateCart(200,300,400)) // it will give an array of [200,300,400] due to the (...num) 
 
 
+function calculateCart(val1,val2,...num){
+    return num
+}
+
+// console.log(calculateCart(200,300,400,500)) // it will return 400,500 because we have return num in the function
+
+const myNewArray = [1,2,3]
+
+function returnGivenValue(getarray){
+    return getarray[1]
+}
+// returnGivenValue(myNewArray) // this will print tyhe second value of the array
 
 
+// ****** SCOPE *******
 
 
+let u = 300
+var t = 400
 
 
+if(1){
+    let u = 30
+    var t = 40
+    const k = 500
+    // console.log(`Inner let = ${u}`)
+     
+}
+
+// console.log("outer let", u)
+
+function one(){
+    const username = "utkarsh"
+    function two(){
+        const website ="mine"
+        console.log(username)
+    }
+    // console.log(website) // this gives an error because the oter function can't call the inner elements 
+    two()
+}
+one()
 
 
-
-
-
-
-
-
+// ++++++++++++ INTERESTING  +++++++++++++
 
 
 
