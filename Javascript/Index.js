@@ -394,7 +394,9 @@ one()
 
 // console.dir(document)
 
-
+// document.getElementById('title') return the complete value 
+// document.getElementById('title').className
+// getAttribute, setAttribute
 
 
 
