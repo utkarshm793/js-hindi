@@ -47,7 +47,7 @@ let a = 3;
 const b = a++; // a=4, b=3
 
 let s = 3;
-const d= ++s; // s=4, d=4
+const d = ++s; // s=4, d=4
 
 // === it will check strictly, like data type also
 
@@ -64,7 +64,7 @@ const anotherId = Symbol('123')
 
 // Arrays, Objects, Functions
 
-const heros =  ["shaktiman","hanuman"]
+const heros = ["shaktiman", "hanuman"]
 
 // ***** STACK AND HEAP MEMORY *****
 
@@ -92,7 +92,7 @@ user2.name = "mis";
 
 // ******* STRINGS ********
 
-const name1= "utkarsh"
+const name1 = "utkarsh"
 let surName = "mishra"
 
 // console.log(`my name is ${name1} ${surName}`)
@@ -159,17 +159,17 @@ let myTimeStamp = Date.now();
 
 let myDate1 = createADate.toLocaleString('default', {
 
-weekday: "long",
+    weekday: "long",
 
 })
 
 // ********** ARRAYS **********
 
-const myArr = [1,2,3,true,null,"hello"]
+const myArr = [1, 2, 3, true, null, "hello"]
 
- const myArr2 = new Array(1,4,3,5) // another way to create an array 
+const myArr2 = new Array(1, 4, 3, 5) // another way to create an array 
 
- //     ARRAY METHODS
+//     ARRAY METHODS
 
 //  myArr.push(6)
 // myArr.pop()
@@ -180,26 +180,26 @@ const newArr = myArr.join() // it gives same as an array but the data type of th
 
 // slice and splice
 
-const myn1 = myArr.slice(1,4)
-const myn2 = myArr.splice(1,4)
+const myn1 = myArr.slice(1, 4)
+const myn2 = myArr.splice(1, 4)
 
 // console.log(myn1) // it will give [2,3,true]
 // console.log("a", myArr)
 // console.log(myn2) // it will give [2,3,true,null]
 
-const marvel_heros = ["IronMan","Cap", "Thor" ]
-const dc_heros = ["superman", "batman","wonderwomen"]
+const marvel_heros = ["IronMan", "Cap", "Thor"]
+const dc_heros = ["superman", "batman", "wonderwomen"]
 
 // console.log(marvel_heros.push(dc_heros))
 
 const allHeros = marvel_heros.concat(dc_heros)
 
 // console.log(allHeros).  it will merge both arrays
- 
-const all_new_heros = [...marvel_heros , ...dc_heros]
+
+const all_new_heros = [...marvel_heros, ...dc_heros]
 // console.log(all_new_heros)
 
-const checkArr = [1,2,[3,4,5,[6,7,8]],[9,10],]
+const checkArr = [1, 2, [3, 4, 5, [6, 7, 8]], [9, 10],]
 
 // console.log(checkArr.flat(1)) //it removes the first bracket which inside the array
 
@@ -216,11 +216,11 @@ const mySym = Symbol("key1")
 
 const userA = {
 
-name: "Utkarsh",
-"full name": "Utkarsh Mishra",
-[mySym]: "mykey1",
-age: 19,
- location: "gorakhpur"
+    name: "Utkarsh",
+    "full name": "Utkarsh Mishra",
+    [mySym]: "mykey1",
+    age: 19,
+    location: "gorakhpur"
 }
 
 // console.log(userA.age) == console.log(userA.["age"])
@@ -231,12 +231,12 @@ age: 19,
 
 // Object.freeze(userA) // it will freeze all the upcoming changes in the object
 
-userA.greeting = function(){
+userA.greeting = function () {
     // console.log("Hello everyone")
 }
 
 
-userA.greeting2 = function(){
+userA.greeting2 = function () {
     // console.log(`Hello everyone, ${this.name}`)
 }
 
@@ -246,8 +246,8 @@ userA.greeting2 = function(){
 
 // const tinderUser = new Object() // one way to create an object, it is a singelton object
 
-const tinderUser ={} //  this is a non singelton object 
- 
+const tinderUser = {} //  this is a non singelton object 
+
 tinderUser.id = "2345rfgh"
 tinderUser.name = "ukarsh mishra"
 tinderUser.isLoggesIn = false
@@ -265,11 +265,11 @@ const regularUser = {
 
 // console.log(regularUser.fullname)  // to access things in the obect
 
-const obj1 = {1: "a", 2: "b"}
-const obj2 = {3: "a", 4: "b"}
+const obj1 = { 1: "a", 2: "b" }
+const obj2 = { 3: "a", 4: "b" }
 
-const obj3 = {...obj1,...obj2} // this is the another way to add an object
-const obj4 = Object.assign({},obj1, obj2) // it is the main way to add an object 
+const obj3 = { ...obj1, ...obj2 } // this is the another way to add an object
+const obj4 = Object.assign({}, obj1, obj2) // it is the main way to add an object 
 // console.log(obj3)
 
 const userArr = [
@@ -301,13 +301,13 @@ const course = {
     price: 999
 }
 // course.coursename // to call
-const {coursename: name3} = course
+const { coursename: name3 } = course
 
 // console.log(name3)
 
 //  ***** FUNCTIONS *******
 
-function printName(){
+function printName() {
     console.log("utkarsh mishra")
 }
 
@@ -318,40 +318,40 @@ function printName(){
 // }
 // addnum(7,9)
 
-function addnum(num1,num2){
-    return  num1 + num2
- }
- const result1 = addnum(7,8)
-//  console.log(`result is ${result1}`)
- 
-function logginUsermsg(username){
-if(!username){ // !username => (username === undefined)
-console.log("Please Enter a username")
-return
+function addnum(num1, num2) {
+    return num1 + num2
 }
- return `${username} just logged in`
+const result1 = addnum(7, 8)
+//  console.log(`result is ${result1}`)
+
+function logginUsermsg(username) {
+    if (!username) { // !username => (username === undefined)
+        console.log("Please Enter a username")
+        return
+    }
+    return `${username} just logged in`
 }
 
 // console.log(logginUsermsg("utkarsh mishra"))
 //  console.log(logginUsermsg()) it will print the statement given in the if condition
 
 
-function calculateCart(...num){
+function calculateCart(...num) {
     return num
 }
 
 // console.log(calculateCart(200,300,400)) // it will give an array of [200,300,400] due to the (...num) 
 
 
-function calculateCart(val1,val2,...num){
+function calculateCart(val1, val2, ...num) {
     return num
 }
 
 // console.log(calculateCart(200,300,400,500)) // it will return 400,500 because we have return num in the function
 
-const myNewArray = [1,2,3]
+const myNewArray = [1, 2, 3]
 
-function returnGivenValue(getarray){
+function returnGivenValue(getarray) {
     return getarray[1]
 }
 // returnGivenValue(myNewArray) // this will print tyhe second value of the array
@@ -364,20 +364,20 @@ let u = 300
 var t = 400
 
 
-if(1){
+if (1) {
     let u = 30
     var t = 40
     const k = 500
     // console.log(`Inner let = ${u}`)
-     
+
 }
 
 // console.log("outer let", u)
 
-function one(){
+function one() {
     const username = "utkarsh"
-    function two(){
-        const website ="mine"
+    function two() {
+        const website = "mine"
         console.log(username)
     }
     // console.log(website) // this gives an error because the oter function can't call the inner elements 
@@ -390,7 +390,56 @@ one()
 
 
 
-as
+// $$$$$$$$$$$$$  DOM MANIPULATION  $$$$$$$$$$$$$$
+
+// console.dir(document)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
