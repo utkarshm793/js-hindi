@@ -378,7 +378,7 @@ function one() {
     const username = "utkarsh"
     function two() {
         const website = "mine"
-        console.log(username)
+        // console.log(username)
     }
     // console.log(website) // this gives an error because the oter function can't call the inner elements 
     two()
@@ -398,22 +398,73 @@ one()
 // document.getElementById('title').className
 // getAttribute, setAttribute
 
+// forEach padhna h 
 
+// *************** HIGH ORDEER LOOPS *****************
 
+// forEach loop
 
+const coding = ["js","cpp",'python']
+// coding.forEach(function (item) {   // item will get the elements from the array
+//     console.log(item)
 
+// })
 
+// coding.forEach( (item) => {
+//     console.log(item)
+// });
 
+const printMe = (item, index, arr)=>{
+    console.log(item, index, arr)
+}
 
+// coding.forEach(printMe)
 
+const myCoding = [
+    {
+languageName: "jsavascript",
+languageFileName: "java"
 
+},
 
+{
+    languageName: "python",
+    languageFileName: "py"
+    
+    }
+]
 
+// myCoding.forEach((value)=>{
+//     console.log(value.languageFileName)
+// })
 
+// ***** FILTER,  MAP , REDUCE ********
 
+// const values = coding.forEach((item)=>{
+//     console.log(item)
+//     return item
+// })
 
+// console.log(values)
 
+const  numBers = [1,2,3,4,5,6,7,8]
 
+// const newNums = numBers.filter( (val) => val > 3)
+
+// const newNums = numBers.filter( (val)=> {
+//     return val >3                                 // always use return keyword during use of parenthesis {} brackets because it creates a scope     
+// })
+
+// console.log(newNums);
+
+const myNums = [ ]
+
+// numBers.forEach((nval)=>{
+//     if (nval > 3) {
+//         myNums.push(nval)
+        
+//     }
+// })
 
 
 
